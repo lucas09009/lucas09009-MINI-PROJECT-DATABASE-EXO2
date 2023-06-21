@@ -1,0 +1,15 @@
+SELECT * FROM customer;
+SELECT first_name, last_name FROM customer AS full_name;
+SELECT distinct create_date FROM customer;
+SELECT * FROM customer ORDER BY first_name DESC;
+SELECT film_id, title, description, release_year, rental_rate FROM film ORDER BY rental_rate ASC;
+SELECT address, phone FROM address VALUES(district);
+SELECT * FROM film WHERE film_id = 15 OR film_id = 150;
+SELECT film_id, title, description, length, rental_rate FROM film WHERE title = 'Cider Desire' ;
+SELECT film_id, title, description, length, rental_rate FROM film WHERE SUBSTRING(title, 1 , 2) ILIKE '%ci%';
+SELECT * FROM film ORDER BY rental_rate ASC LIMIT 10;
+SELECT * FROM film ORDER BY rental_rate;
+SELECT first_name, last_name, amount, payment_date FROM customer, payment;
+SELECT title FROM film ;
+SELECT city, city.country_id, country.country_id, country FROM city,country WHERE city.country_id = country.country_id;
+SELECT customer.customer_id, customer.first_name, customer.last_name, amount, payment_date FROM customer, payment ORDER BY staff_id;
